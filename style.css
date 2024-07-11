@@ -58,7 +58,7 @@ body {
     font-family:Georgia, 'Times New Roman', Times, serif;
   }
   
-  .logo.is-animetion span {
+  .logo.is-animation span {
     display: inline-block;
     animation: wave-text 1s ease-in-out 2;
   }
