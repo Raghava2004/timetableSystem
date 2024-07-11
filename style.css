@@ -1,23 +1,23 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #3b3b3b;
     margin: 0;
     padding: 0;
   }
   
   .container {
     max-width: 800px;
-    margin: 20px auto;
+    margin: 15px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: #f8f6f6;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position:fixed;
+    left:50%;
+    transform: translate(-50%);
   }
   
-  h1 {
-    text-align: center;
-    color: #333;
-  }
+  
   
   form {
     margin-bottom: 20px;
@@ -37,16 +37,98 @@ body {
   }
   
   button {
-    background-color: #007bff;
+    background-color: #000000;
     color: #fff;
     cursor: pointer;
   }
   
   button:hover {
-    background-color: #0056b3;
+    background-color: #0d2238;
   }
   
   #calendar {
     margin-top: 20px;
   }
+  
+  .logo.is-animetion {
+    margin-top: 0.6em;
+    text-align: center;
+    color: #333;
+    font-size: 30px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  .logo.is-animetion span {
+    display: inline-block;
+    animation: wave-text 1s ease-in-out 2;
+  }
+  
+  .logo.is-animetion {
+    span:nth-of-type(1){ animation-delay: 0.0s; }
+    span:nth-of-type(2){ animation-delay: 0.1s; }
+    span:nth-of-type(3){ animation-delay: 0.2s; }
+    span:nth-of-type(4){ animation-delay: 0.3s; }
+   /* span:nth-of-type(5){ animation-delay: 0.4s; } */
+  }
+  
+  @keyframes wave-text{
+    00%{
+      color:red;
+      transform: translateY(0em);
+    }
+    60%{
+      color:green;
+      transform: translateY(-0.6em);
+    }
+    100%{
+      color:#007bff;
+      transform: translateY(0em);
+    }
+  }
+  /* Mobile devices (max-width: 768px) */
+@media only screen and (max-width: 768px) {
+  .logo.is-animetion {
+    font-size: 20px;
+  }
+  .logo.is-animetion span {
+    animation-duration: 0.5s;
+  }
+  @keyframes wave-text {
+    00% {
+      color: red;
+      transform: translateY(0em);
+    }
+    60% {
+      color: green;
+      transform: translateY(-0.4em);
+    }
+    100% {
+      color: #007bff;
+      transform: translateY(0em);
+    }
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .logo.is-animetion {
+     font-size: 22px;
+   }
+  .logo.is-animetion span {
+     animation-duration: 0.7s;
+   }
+   @keyframes wave-text {
+     00% {
+       color: rgb(204, 255, 0);
+       transform: translateY(0em);
+     }
+     60% {
+       color: green;
+       transform: translateY(-0.5em);
+     }
+     100% {
+       color: #007bff;
+       transform: translateY(0em);
+     }
+   }
+ }
+  
   
